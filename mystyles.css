@@ -37,31 +37,72 @@ h1{
     list-style: none;
 }
 .container{
-    width: 40%;
-    height: 800px;
+    width: 60%;
+    height: 200px;
+    padding: 20px;
     margin-left: auto;
     margin-right: auto;
+    background-color: #fff;
+    position: relative;
+}
+.container,
+.container::before,
+.container::after {
+    /* Styles to distinguish sheets from one another */
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.25);
+    border: 1px solid #bbb;
+}
+
+.container::before,
+.container::after {
+    content: "";
+    position: absolute;
+    height: 95%;
+    width: 99%;
+    background-color: #eee;
+}
+
+.container::before {
+    right: 15px;
+    top: 0;
+    transform: rotate(-1deg);
+    z-index: -1;
+}
+
+.container::after {
+    top: 5px;
+    right: -5px;
+    transform: rotate(1deg);
+    z-index: -2;
 }
 #input-place{
-    margin: auto;
     width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    padding: 5px;
-    font-size: 22px;
-    border-radius: 4px;
-    margin-bottom: 10px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    font-size: 28px;
+    margin-bottom: 0;
+}
+#input-place:focus{
+    border: 3px solid #555;
 }
 ul{
     padding:  0;
+    margin: 0;
 }
 .input-field{
-    max-width: 100%;
-    min-width: 100%;
-    padding: 5px;
-    font-size: 20px;
-    background-color: #D7CCC8;
+    max-width: calc(100% + 40px);
+    min-width: calc(100% + 40px);
+    margin-left: -20px;
+    /*padding: 5px;*/
+    /*background-color: #ECEFF1;*/
     display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .list-check{
     margin-right: 10px;
@@ -69,13 +110,16 @@ ul{
 }
 .input-field span{
     width: 87%;
+    font-size: 32px;
 }
 li{
-    margin-top: 5px;
+    /*margin-top: 5px;*/
     transition: 500ms;
+    border-bottom: 1px solid #555;
 }
 li:hover{
-    box-shadow: 5px 5px 15px 0px #333;
+    /*box-shadow: 5px 5px 15px 0px #333;*/
+    background-color: #ECEFF1;
     transition: 500ms;
 }
 .remove-todo{
