@@ -47,12 +47,10 @@ document.getElementById("input-place").onkeypress = function(event) {
         applyEdit();
         function applyEdit() {
             edit.onclick = function(e) {
-                let rand = Math.random();
                 let content = text.innerHTML;
                 //Create an input element on the fly
                 let newInnerHtml =
                     '<input type="text" id="temp-text' +
-                    // rand +
                     '" value="' +
                     content +
                     '" placeholder="enter new content">';

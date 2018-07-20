@@ -17,9 +17,9 @@ body{
     background-repeat: repeat;
     padding: 0;
     margin: 0;
+    font-family: 'Raleway', sans-serif;
 }
 .head{
-    background-color: #BCAAA4;
     max-width: 100%;
     min-width: 100%;
     padding-top: 20px;
@@ -27,15 +27,71 @@ body{
 }
 h1{
     text-align: center;
-    font-family: Arial;
+    font-size: 48px;
+    opacity: 0.4;
     margin: 0;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 #main-app{
     list-style: none;
 }
 .container{
-    width: 20%;
-    height: 400px;
+    width: 40%;
+    height: 800px;
     margin-left: auto;
     margin-right: auto;
 }
+#input-place{
+    margin: auto;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 5px;
+    font-size: 22px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+ul{
+    padding:  0;
+}
+.input-field{
+    max-width: 100%;
+    min-width: 100%;
+    padding: 5px;
+    font-size: 20px;
+    background-color: #D7CCC8;
+    display: flex;
+}
+.list-check{
+    margin-right: 10px;
+    width: 3%;
+}
+.input-field span{
+    width: 87%;
+}
+li{
+    margin-top: 5px;
+    transition: 500ms;
+}
+li:hover{
+    box-shadow: 5px 5px 15px 0px #333;
+    transition: 500ms;
+}
+.remove-todo{
+    background-color: #ef9a9a;
+    transition: 500ms;
+}
+.remove-todo:hover{
+    background-color: #f44336;
+    transition: 500ms;
+}
+.edit-todo{
+    background-color: #C5E1A5;
+    transition: 500ms;
+}
+.edit-todo:hover{
+    background-color: #8BC34A;
+    transition: 500ms;
+}
+
