@@ -37,13 +37,14 @@ h1{
     list-style: none;
 }
 .container{
-    width: 60%;
-    height: 200px;
+    width: 55%;
+    height: 400px;
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
     background-color: #fff;
     position: relative;
+    /*overflow-y: scroll;*/
 }
 .container,
 .container::before,
@@ -123,19 +124,39 @@ li:hover{
     transition: 500ms;
 }
 .remove-todo{
-    background-color: #ef9a9a;
+    color: #ef9a9a;
     transition: 500ms;
+    background: none !important;
+    border: none;
+    padding: 0 !important;
+    cursor: pointer;
+    font-size: 28px;
 }
 .remove-todo:hover{
-    background-color: #f44336;
+    color: #f44336;
     transition: 500ms;
 }
 .edit-todo{
-    background-color: #C5E1A5;
+    color: #C5E1A5;
     transition: 500ms;
+    background: none !important;
+    border: none;
+    padding: none !important;
+    cursor: pointer;
+    font-size: 28px;
 }
 .edit-todo:hover{
-    background-color: #8BC34A;
+    color: #8BC34A;
     transition: 500ms;
 }
-
+.edit-todo:focus{
+    outline: 0;
+}
+#temp-text{
+    width: 100%;
+    font-size: 32px;
+    opacity: 0.5;
+}
+#temp-text:focus{
+    outline: 0;
+}

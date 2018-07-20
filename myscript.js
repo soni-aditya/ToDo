@@ -16,11 +16,11 @@ document.getElementById("input-place").onkeypress = function(event) {
 
         let cross = document.createElement("button");
         cross.classList.add("remove-todo");
-        cross.innerText = "Delete";
+        cross.innerHTML = '<i class="fas fa-times-circle"></i>';
 
         let edit = document.createElement("button");
         edit.classList.add("edit-todo");
-        edit.innerHTML = "Edit";
+        edit.innerHTML = '<i class="fas fa-edit"></i>';
 
         li.classList.add("input-field");
         li.appendChild(check);
@@ -58,14 +58,23 @@ document.getElementById("input-place").onkeypress = function(event) {
                 text.innerHTML = newInnerHtml;
 
                 //Change the text on the button
-                e.target.innerHTML = "Save";
+                emptyChild();
+                edit.innerHTML = '<i class="fas fa-save"></i>';
                 //when save is clicked, content is saved
-                e.target.onclick = function() {
+                edit.onclick = function() {
                     content = document.getElementById("temp-text").value;
                     text.innerHTML = content;
-                    e.target.innerHTML = "Edit";
+                    emptyChild();
+                    edit.innerHTML = '<i class="fas fa-edit"></i>';
                     applyEdit();
                 };
+
+                function emptyChild() {
+                    while (edit.firstChild){
+                        console.log('Inside');
+                        edit.removeChild(edit.firstChild);
+                    }
+                }
             };
         }
     }
