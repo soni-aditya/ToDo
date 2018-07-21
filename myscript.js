@@ -1,3 +1,4 @@
+let count = 0;
 document.getElementById("input-place").onkeypress = function(event) {
     if (event.key == "Enter") {
         const ul = document.getElementById("main-app");
@@ -7,9 +8,18 @@ document.getElementById("input-place").onkeypress = function(event) {
         //Creating li element
         let li = document.createElement("li");
         //Creating the building blocks of li
+        let labelCheck = document.createElement('label');
+        labelCheck.classList = 'checkContainer';
+
         let check = document.createElement("input");
         check.type = "checkbox";
         check.classList.add("list-check");
+
+        let checkSpan = document.createElement('span');
+        checkSpan.classList = 'checkmark';
+
+        labelCheck.appendChild(check);
+        labelCheck.appendChild(checkSpan);
 
         let text = document.createElement("span");
         text.innerText = task;
@@ -23,7 +33,8 @@ document.getElementById("input-place").onkeypress = function(event) {
         edit.innerHTML = '<i class="fas fa-edit"></i>';
 
         li.classList.add("input-field");
-        li.appendChild(check);
+        // li.appendChild(checkLabel);
+        li.appendChild(labelCheck);
         li.appendChild(text);
         li.appendChild(cross);
         li.appendChild(edit);
@@ -56,7 +67,6 @@ document.getElementById("input-place").onkeypress = function(event) {
                     '" placeholder="enter new content">';
 
                 text.innerHTML = newInnerHtml;
-
                 //Change the text on the button
                 emptyChild();
                 edit.innerHTML = '<i class="fas fa-save"></i>';
@@ -77,5 +87,6 @@ document.getElementById("input-place").onkeypress = function(event) {
                 }
             };
         }
+
     }
 };
