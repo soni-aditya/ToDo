@@ -87,6 +87,7 @@ document.getElementById("input-place").onkeypress = function(event) {
                 }
             };
         }
+        console.log(document.getElementsByClassName('input-field').length);
 
     }
 };
