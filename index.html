@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>ToDo List</title>
     <link rel="stylesheet" href="mystyles.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+        crossorigin="anonymous">
 </head>
+
 <body>
     <div class="head">
         <h1>todos</h1>
@@ -17,9 +20,19 @@
         <!--<input type="checkbox" class="list-check">-->
         <div class="container">
 
-            <ul id="main-app">
-                <input type="text" placeholder="Enter Task.." id="input-place">
-            </ul>
+            <div class="app">
+                <ul id="main-app">
+                    <input type="text" tabindex="0" placeholder="Enter Task.." id="input-place">
+                </ul>
+                <div class="foot" style="display: none;">
+                    <span id="total"></span>
+                    <span id="filters">
+                        <button id="all" onclick="showAll()">All</button>
+                        <button id="completed" onclick="showCompleted()">Completed</button>
+                        <button id="active" onclick="showActive()">Active</button>
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
 </body>
