@@ -117,14 +117,20 @@ function showCompleted() {
     if (!check_status) {
       all[i].style.display = "none";
     }
+    else{
+        all[i].style.display = "flex";
+    }
   }
 }
 function showActive() {
   let all = document.getElementsByTagName("li");
   for (var i = 0; i < all.length; i++) {
     let check_status = all[i].childNodes[0].childNodes[0].checked;
-    if (check_status) {
-      all[i].style.display = "none";
-    }
+      if (!check_status) {
+          all[i].style.display = "flex";
+      }
+      else{
+          all[i].style.display = "none";
+      }
   }
 }

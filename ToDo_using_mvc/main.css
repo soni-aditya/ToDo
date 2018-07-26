@@ -1,0 +1,210 @@
+body {
+  background-color: #f5f5f5;
+  font-family: "Quicksand", sans-serif;
+}
+.head {
+  max-width: 100%;
+  min-width: 100%;
+  padding-top: 20px;
+  padding-bottom: 2px;
+}
+h1 {
+  text-align: center;
+  font-size: 100px;
+  opacity: 0.4;
+  margin: 0;
+  color: #cc9a9a;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: normal;
+}
+#main-app {
+  list-style: none;
+}
+.container {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  /*background-color: #/fff;*/
+  position: relative;
+}
+#input-place {
+  width: calc(100%);
+  padding: 12px 20px;
+  /*margin: 8px 0;*/
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  font-size: 28px;
+  margin-bottom: 0;
+  background: rgba(0, 0, 0, 0.003);
+  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
+  font-family: "Quicksand", sans-serif;
+  color: #616161;
+}
+#input-place:focus {
+  border: 1px solid #555;
+}
+.app {
+  margin: 0;
+  background: #fff;
+  box-shadow:
+        /* The top layer shadow */ 0 1px 1px rgba(0, 0, 0, 0.15),
+    /* The second layer */ 0 10px 0 -5px #eee,
+    /* The second layer shadow */ 0 10px 1px -4px rgba(0, 0, 0, 0.15),
+    /* The third layer */ 0 20px 0 -10px #eee,
+    /* The third layer shadow */ 0 20px 1px -9px rgba(0, 0, 0, 0.15);
+  /* Padding for demo purposes */
+  /* padding: 30px; */
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.input-field {
+  max-width: 100%;
+  min-width: 100%;
+  /* margin-left: -20px; */
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+ul {
+  padding: 0;
+}
+.list-check {
+  margin-right: 10px;
+  width: 3%;
+}
+.input-field span {
+  width: 87%;
+  font-size: 32px;
+  margin-left: 15px;
+}
+li {
+  /*margin-top: 5px;*/
+  transition: 500ms;
+  /*border-bottom: 1px solid #555;*/
+}
+li:hover {
+  box-shadow: 1px 0px 3px 1px #333;
+  transition: 500ms;
+}
+.remove-todo {
+  color: #ef9a9a;
+  transition: 500ms;
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  cursor: pointer;
+  font-size: 28px;
+}
+.remove-todo:hover {
+  color: #f44336;
+  transition: 500ms;
+}
+.edit-todo {
+  color: #c5e1a5;
+  transition: 500ms;
+  background: none !important;
+  border: none;
+  padding: none !important;
+  cursor: pointer;
+  font-size: 28px;
+}
+.edit-todo:hover {
+  color: #8bc34a;
+  transition: 500ms;
+}
+.edit-todo:focus {
+  outline: 0;
+}
+#temp-text {
+  width: 100%;
+  font-size: 32px;
+  opacity: 0.5;
+}
+#temp-text:focus {
+  outline: 0;
+}
+/*Custom checkbox*/
+/*Container for custom checkbox*/
+.checkContainer {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-left: -10px;
+}
+
+/* Hide the browser's default checkbox */
+.checkContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 31px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  margin-bottom: -3px;
+  transition: 5s;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkContainer:hover input ~ .checkmark {
+  background-color: #ccc;
+  transition: 500ms;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkContainer input:checked ~ .checkmark {
+  background-color: #fff;
+  transition: 1s;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  transition: 1s;
+}
+
+/* Show the checkmark when checked */
+.checkContainer input:checked ~ .checkmark:after {
+  display: block;
+  transition: 1s;
+}
+
+/* Style the checkmark/indicator */
+.checkContainer .checkmark:after {
+  left: 11px;
+  top: 7px;
+  width: 7px;
+  height: 12px;
+  border: solid #009688;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transition: 5s;
+}
+.foot {
+  display: flex;
+}
